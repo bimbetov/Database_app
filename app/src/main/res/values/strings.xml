@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Database_app</string>
+    <string name="default_admin_tv">Вы вошли как администратор</string>
+    <string name="default_student_tv">Вы вошли как студент</string>
+</resources>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    tools:context=".student_info">
+    <TextView
+        android:id="@+id/student_info_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text=""
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <Button
+        android:id="@+id/change_student_information_btn"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Изменить"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@id/delete_student_information_btn"
+        app:layout_constraintTop_toBottomOf="@id/student_info_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <Button
+        android:id="@+id/delete_student_information_btn"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="Удалить"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/change_student_information_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/student_info_tv"/>
+
+    <LinearLayout
+        android:id="@+id/linear_layout_for_new_info"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/change_student_information_btn">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Введите новую информации о студенте"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/et_new_surname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Фамилия"/>
+        <EditText
+            android:id="@+id/et_new_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Имя"/>
+        <EditText
+            android:id="@+id/et_new_fatherName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Отчество"/>
+        <EditText
+            android:id="@+id/et_new_yearAdmission"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Год поступления"/>
+        <EditText
+            android:id="@+id/et_new_formEducation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Форма обучения"/>
+        <Button
+            android:id="@+id/save_new_student_info_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Сохранить"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

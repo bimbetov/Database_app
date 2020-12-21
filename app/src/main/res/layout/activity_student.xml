@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    tools:context=".StudentActivity">
+
+    <TextView
+        android:id="@+id/default_student_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/default_student_tv"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="#bdbdbd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/default_student_tv"
+        />
+
+    <LinearLayout
+        android:id="@+id/linear_layout_for_count_student"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/default_student_tv">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:textAlignment="center"
+            android:text="Количетсво студентов на определенной форме обучения"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/daytime_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:text="дневная" />
+
+            <Button
+                android:id="@+id/evening_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:text="вечерняя" />
+
+            <Button
+                android:id="@+id/extramural_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:layout_weight="1"
+                android:text="заочная" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_line1"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="5dp"
+        android:background="#bdbdbd"
+        app:layout_constraintBottom_toTopOf="@id/linear_layout_for_discipline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear_layout_for_count_student" />
+
+    <LinearLayout
+        android:id="@+id/linear_layout_for_discipline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_line1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Посчитать количество часово по указанной дисциплине:"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/et_for_discipline"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="Дисциплина" />
+            <View
+                android:layout_width="20dp"
+                android:layout_height="match_parent"/>
+
+            <EditText
+                android:id="@+id/et_for_semester"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="Семестр" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/count_the_number_of_hours_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="посчитать" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_line2"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        app:layout_constraintTop_toBottomOf="@id/linear_layout_for_discipline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="#bdbdbd"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/linear_layout_for_certificate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintTop_toBottomOf="@id/view_line2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="Справка об успеваемости"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:textAlignment="center"/>
+        <EditText
+            android:id="@+id/surname_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Фамилия"/>
+        <EditText
+            android:id="@+id/name_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Имя"/>
+        <EditText
+            android:id="@+id/patronymic_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Отчество"/>
+        <EditText
+            android:id="@+id/sem_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Семестр"/>
+        <Button
+            android:id="@+id/get_certificate_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Получить"/>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

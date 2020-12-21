@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    tools:context=".adding_student">
+
+    <TextView
+        android:id="@+id/add_student_section_tv"
+        android:text="Вы в разделе ДОБАВИТЬ СТУДЕНТА"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="#bdbdbd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_student_section_tv" />
+
+    <LinearLayout
+        android:id="@+id/linear_layout_for_add_student"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:layout_constraintTop_toBottomOf="@id/add_student_section_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Заполните информацию о студенте"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/etSurname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Фамилия"/>
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Имя"/>
+        <EditText
+            android:id="@+id/etFatherName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Отчество"/>
+        <EditText
+            android:id="@+id/etYearAdmission"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Год поступления"/>
+        <EditText
+            android:id="@+id/etFormEducation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Форма обучения"/>
+        <Button
+            android:id="@+id/add_new_student_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Добавить"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    tools:context=".academic_plan">
+
+    <TextView
+        android:id="@+id/academic_plan_tv"
+        android:text="Вы в разделе УЧЕБНЫЙ ПЛАН"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="#bdbdbd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/academic_plan_tv" />
+
+    <LinearLayout
+        android:id="@+id/linear_layout_for_search_curriculum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintTop_toBottomOf="@id/academic_plan_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Введите название специальности:"
+            android:textSize="20sp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/black"/>
+        <EditText
+            android:id="@+id/specialty_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Специальность"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Введите название дисциплины:"
+            android:textSize="20sp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/discipline_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:hint="Дисциплина"/>
+
+        <Button
+            android:id="@+id/search_discipline_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Найти"
+            android:textSize="20sp"
+            />
+    </LinearLayout>
+    <Button
+        android:id="@+id/show_curriculumDatabase_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Показать учебный план"
+        android:textSize="20sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintTop_toBottomOf="@id/linear_layout_for_search_curriculum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/add_discipline_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="Добавить дисцилпину"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/show_curriculumDatabase_btn"
+        app:layout_constraintVertical_bias="0.1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    tools:context=".academic_performance_change">
+    <TextView
+        android:id="@+id/academic_performance_info_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Семестр, Студент, Дисциплина, Оценка"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <Button
+        android:id="@+id/change_academic_performance_information_btn"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Изменить"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@id/delete_academic_performance_information_btn"
+        app:layout_constraintTop_toBottomOf="@id/academic_performance_info_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <Button
+        android:id="@+id/delete_academic_performance_information_btn"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="Удалить"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/academic_performance_info_tv"
+        app:layout_constraintStart_toEndOf="@id/change_academic_performance_information_btn"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/linear_layout_for_new_info_academic_performance"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/change_academic_performance_information_btn">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Введите новую информацию об успеваемости"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/et_new_surname_in_journal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Фамилия"/>
+        <EditText
+            android:id="@+id/et_new_name_in_journal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Имя"/>
+        <EditText
+            android:id="@+id/et_new_fatherName_in_journal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Отчество"/>
+        <EditText
+            android:id="@+id/et_new_discipline_in_journal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Дисциплина"/>
+        <EditText
+            android:id="@+id/et_new_semester_in_journal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Семестр"/>
+        <EditText
+            android:id="@+id/et_new_rating_in_journal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Оценка"/>
+        <Button
+            android:id="@+id/save_new_ap_info_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Сохранить"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

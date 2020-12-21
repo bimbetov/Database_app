@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    tools:context=".curriculum_change">
+    <TextView
+        android:id="@+id/curriculum_info_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <Button
+        android:id="@+id/change_curriculum_information_btn"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Изменить"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@id/delete_curriculum_information_btn"
+        app:layout_constraintTop_toBottomOf="@id/curriculum_info_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <Button
+        android:id="@+id/delete_curriculum_information_btn"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="Удалить"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/curriculum_info_tv"
+        app:layout_constraintStart_toEndOf="@id/change_curriculum_information_btn"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/linear_layout_for_new_info_curriculum"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/change_curriculum_information_btn">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Введите новую информацию о дисциплине"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/et_new_speciality_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Специальность"/>
+        <EditText
+            android:id="@+id/et_new_discipline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Дисциплина"/>
+        <EditText
+            android:id="@+id/et_new_semester"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Семестр"/>
+        <EditText
+            android:id="@+id/et_new_hours"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Часы"/>
+        <EditText
+            android:id="@+id/et_new_reporting_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Форма отчетности"/>
+        <Button
+            android:id="@+id/save_new_curriculum_info_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Сохранить"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
